@@ -10,3 +10,5 @@ Features
         Add a new friend
     New Friend Registration: A form to register a new friend, including their name, number, and a link to their image.
     Partial View: A footer that is loaded as a partial view, displaying the website name and a link to the friends' page.
+    Middleware: Custom middleware to display the total number of registered friends as a plain number at /total-friends.
+Static Friend List: A static list of the Friend class initialized with 10 friends for demonstration purposes.
