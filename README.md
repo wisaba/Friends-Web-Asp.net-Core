@@ -1,4 +1,5 @@
 Friend Management Web Application
+
 Features
 
     MVC Architecture: The application follows the Model-View-Controller (MVC) design pattern.
