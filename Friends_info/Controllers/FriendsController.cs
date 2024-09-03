@@ -1,18 +1,32 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Friends_info.Data.Context;
+using Friends_info.Services;
+using Microsoft.AspNetCore.Mvc;
 
-namespace Friends_info.Controllers
-{
+namespace Friends_info.Controllers { 
+
     public class FriendsController : Controller
     {
-        public IActionResult Index()
-        {
-            
-            return View();
+        FriendsRepository friendsrepo;
+
+        public FriendsController(FriendsRepository friendsRepository) { 
+        
+        friendsrepo = friendsRepository;
+        
         }
-        public IActionResult List()
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
-            var friend = Data.Database.GetFriends();
+            var friends = await this.friendsrepo.Read();
+            ViewBag.ThisPageTitle = "friendsList";
+            ViewData["PageTitle"] = "You can view all friends here.";
+            return View(friends);
+        }
+        [HttpGet]
+        public async Task<IActionResult> List()
+        {
+            var friend = await this.friendsrepo.Read();
             return View(friend);
         }
     }
 }
+    

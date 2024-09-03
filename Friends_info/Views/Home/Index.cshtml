@@ -101,7 +101,29 @@
         button:hover {
             background-color: #218838;
         }
+
+        .ctn {
+            display: grid;
+            place-items: center;
+        }
     </style>
+
+
+
+    <div class="ctn">
+        <form method="post" action="/subscribe">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input name="SubscribingEmail" type="email" placeholder="EmailAddress" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p>@ViewBag.Message</p>
+    </div>
+
+   
    <div class="container">
         <h2>Add your new Friend</h2>
         <form method = "post" action="/Add" id="friend-form">
