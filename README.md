@@ -1,7 +1,13 @@
-Friend Management Web Application
+Friend Management Web Application : This is a web application built using ASP.NET Core, designed to manage friends' information. The application has been expanded to include database integration with Entity Framework Core, a RESTful API for handling CRUD operations, Swagger for API documentation, and Hangfire for background job processing.
 
 Features
 
+    CRUD Operations: Perform create, read, update, and delete operations on friends' data.
+    Database Integration: The project uses Entity Framework Core for database operations with SQL Server.
+    REST API: Exposes a RESTful API for interacting with the application's data.
+    Swagger: Provides API documentation and an interactive UI for testing API endpoints.
+    Hangfire: Implements background job processing and task scheduling for sending Email and subscribing.
+    Dependency Injection: Utilizes ASP.NET Core's built-in dependency injection for service management.
     MVC Architecture: The application follows the Model-View-Controller (MVC) design pattern.
     Friend Class: A Friend class that contains the friend's name, number, and photo.
     FriendsController: A controller named FriendsController that performs the following operations:
