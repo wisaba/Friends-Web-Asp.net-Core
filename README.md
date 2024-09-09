@@ -7,6 +7,7 @@ Features
     REST API: Exposes a RESTful API for interacting with the application's data.
     Swagger: Provides API documentation and an interactive UI for testing API endpoints.
     Hangfire: Implements background job processing and task scheduling for sending Email and subscribing.
+    Postman : I used this app to make sure that we can make changes in database just by having the url and by accessing to the Postman
     Dependency Injection: Utilizes ASP.NET Core's built-in dependency injection for service management.
     MVC Architecture: The application follows the Model-View-Controller (MVC) design pattern.
     Friend Class: A Friend class that contains the friend's name, number, and photo.
